@@ -81,3 +81,79 @@
 
                     <div id="recipes-grid" class="recipes-grid"></div>
                 </section>
+                <!-- ====== DASHBOARD SECTION ====== -->
+                <section id="dashboard-section" class="app-section hidden">
+                    <h2>Your Analytics Dashboard</h2>
+                    <div class="dashboard-grid">
+                        <div class="dash-card">
+                            <h3>Total Recipes</h3>
+                            <p id="dash-total-recipes">0</p>
+                        </div>
+                        <div class="dash-card">
+                            <h3>Favorite Recipes</h3>
+                            <p id="dash-fav-recipes">0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ====== ABOUT SECTION ====== -->
+                <section id="about-section" class="app-section hidden">
+                    <h2>About DishForge</h2>
+                    <p>DishForge is your ultimate digital cookbook. Add your custom culinary creations, filter through your pantry list, track analytics on your dashboard, and curate your top-tier meals all in one unified local interface.</p>
+                    <p>Built with pure Vanilla JavaScript, HTML5, and CSS3.</p>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <!-- ================= ALWAYS VISIBLE FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 DishForge Pro. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS SYSTEM (POPUPS) ================= -->
+    <div id="details-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-details-btn" class="modal-close-btn">&times;</button>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+    <div id="add-recipe-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-add-modal-btn" class="modal-close-btn">&times;</button>
+            <h2>Add New Recipe</h2>
+            <form id="add-recipe-form">
+                <div class="form-group">
+                    <label>Recipe Title</label>
+                    <input type="text" id="recipe-title" required placeholder="e.g., Spicy Arrabiata Pasta">
+                </div>
+                <div class="form-group">
+                    <label>Ingredients (Comma separated)</label>
+                    <input type="text" id="recipe-ingredients" required placeholder="e.g., pasta, tomato, chili flakes">
+                </div>
+                <div class="form-group">
+                    <label>Instructions / Steps</label>
+                    <textarea id="recipe-instructions" rows="4" required placeholder="Step 1. Boil pasta..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Image URL (Optional)</label>
+                    <input type="url" id="recipe-image" placeholder="https://example.com/image.jpg">
+                </div>
+                <button type="submit" class="btn btn-block">Save Recipe</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
